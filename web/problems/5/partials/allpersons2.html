@@ -1,0 +1,23 @@
+<div class="section">   
+    <div class="container">
+        <div class="row">
+            <div class="page-header">
+                <h1>All users</h1>
+            </div>
+            <table class="table table-responsive table-condensed">
+                <thead>
+                <th>Picture</th>
+                <th>Name</th>
+                <th>Details</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in ctrl.users">
+                        <td><img src="{{user.picture.thumbnail}}" class="img-thumbnail"/></td>
+                        <td>{{user.first}}</td>
+                        <td><a ng-href="#/user/{{user.first}}" alt="{{user.first}} thumbnail">Details</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<h3 class="ng-binding ng-scope">Number of cars: {{cars.length}}</h3>
+<input type="search" ng-model="carfilter" placeholder="Filter cars">
+
+<div class="row">
+  <div class="col-xs-12">
+    <table class="table table-striped table-hover ng-scope">
+      <thead>
+          <tr style="font-weight:bold;">
+            <td><a href="" ng-click="predicate = 'id'; reverse=!reverse">ID</a></td>
+            <td><a href="" ng-click="predicate = 'year'; reverse=!reverse">Year</a></td>
+            <td><a href="" ng-click="predicate = 'registered'; reverse=!reverse">Registered</a></td>
+            <td><a href="" ng-click="predicate = 'make'; reverse=!reverse">Make</a></td>
+            <td><a href="" ng-click="predicate = 'model'; reverse=!reverse">Model</a></td>
+            <td><a href="" ng-click="predicate = 'description'; reverse=!reverse">Description</a></td>
+            <td><a href="" ng-click="predicate = 'price'; reverse=!reverse">Price</a></td>
+            <td><a>Action</a></td>
+          </tr>
+      </thead>
+      <tbody>
+          <tr ng-repeat="car in cars | filter: carfilter | orderBy:predicate:reverse" class="ng-scope">
+            <td class="ng-binding">{{car.id}}</td>
+            <td class="ng-binding">{{car.year }}</td>
+            <td class="ng-binding">{{car.registered | date }}</td>
+            <td class="ng-binding">{{car.make}}</td>
+            <td class="ng-binding">{{car.model}}</td>
+            <td class="ng-binding">{{car.description}}</td>
+            <td class="ng-binding">{{car.price | currency}}</td>
+            <td>
+              <a href="#/Edit/{{car.id}}">edit</a> |
+              <a href="#/" ng-click="deleteCar(car.id)">delete</a>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>

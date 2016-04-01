@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html ng-app="MyApp">
+  <head>
+    <title>Problem 4, Angular</title>
+    <script src="../../resources/lib/angular.min.js" type="text/javascript"></script>
+
+    <script src="js/app.js" type="text/javascript"></script>
+    <link href="../../resources/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+      <div ng-controller="MyCtrl">
+        <div class="container">
+          <button ng-click="populate()">Populate</button>
+          <table class="table">
+              <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Eye Color</th>
+                <th>Gender</th>
+                <th>Email</th>
+              </thead>
+              <tbody>
+                  <tr ng-repeat="member in members">
+                      <td>{{member.id}}</td>
+                      <td>{{member.name}}</td>
+                      <td>{{member.age}}</td>
+                      <td>{{member.eyeColor}}</td>
+                      <td>{{member.gender}}</td>
+                      <td>{{member.email}}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      <a href='index.html'>Back</a>
+    </div>
+  </body>
+</html>

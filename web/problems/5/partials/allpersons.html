@@ -1,0 +1,7 @@
+      <div id="home">
+            <table class="table table-responsive">
+                    <tr ng-repeat="user in ctrl.users">
+                        <td><img src="{{user.picture.thumbnail}}" class="img-thumbnail"/>{{user.first}} <a ng-href="#/user/{{user.first}}" alt="{{user.first}} thumbnail">Details</a></td>
+                    </tr>
+            </table>
+        </div>

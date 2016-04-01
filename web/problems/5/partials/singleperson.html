@@ -1,0 +1,11 @@
+<div id="about-me">
+
+        <div class="col-md-3 col-lg-3 "> <img alt="User Pic" src="{{ctrl.currentUser.picture.large}}" class="img-circle img-responsive" height="50" width="50"> </div>
+        {{ctrl.currentUser.first}}
+        {{ctrl.currentUser.last}}
+        <br>{{ctrl.currentUser.street}}
+        {{ctrl.currentUser.city}}
+        {{ctrl.currentUser.zip}}
+        <br><a href="mailto:{{ctrl.currentUser.email}}">{{ctrl.currentUser.email}}</a>
+        <br>{{ctrl.currentUser.phone}} (Phone)<br><br>{{ctrl.currentUser.cell}} (Landline)
+</div>
